@@ -8,11 +8,6 @@ var DarkSkyAPI = (function () {
 	var weather = [];
 
 	var getAPI = $.getJSON(url, function(data) {
-		// weather = data;
-		// var currentLoc = {
-		// 	latidue: data.latitude,
-		// 	longitude: data.longitude
-		// };
 		var items = [],
 		$ul;
 		
@@ -28,8 +23,6 @@ var DarkSkyAPI = (function () {
        	$ul.append(items);
 		
 		 var currentWeather = data.currently;
-		 console.log(currentWeather)
-		// $('#data').html(currentWeather);
 	})
 	.done(function(data) {
 		console.log('done!')
@@ -40,15 +33,7 @@ var DarkSkyAPI = (function () {
 	.always(function(data) {
 		console.log( "complete!" );
 	});
-	
-	
-	//console.log(apiCall)
-	
-	// var publicAPI = {
-	// 	weather: weather
-	// }
 
-	// return publicAPI;
 	
 })();
 
@@ -56,12 +41,6 @@ var skycons = (function(){
 	  var skycons = new Skycons({"color": "#fff"});
 	  
 	  skycons.add("clear-day", Skycons.CLEAR_DAY);
-
-	  // ...or by the canvas DOM element itself.
-	 // skycons.add(document.getElementById("icon2"), Skycons.RAIN);
-
-	  // if you're using the Forecast API, you can also supply
-	  // strings: "partly-cloudy-day" or "rain".
 
 	  // start animation!
 	  skycons.play();
