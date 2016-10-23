@@ -1,0 +1,13 @@
+.button {
+  outline: none;
+}
+
+.panel.ng-hide {
+  transition: all 0.3s cubic-bezier(0, 1, 0.5, 1);
+}
+
+#center-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}

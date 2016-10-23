@@ -1,0 +1,66 @@
+"use strict";
+// Like Angular Services
+var foo = (function () {
+	var nominees = [
+		{
+			name: "Hillary Clinton",
+			party: "Democrat",
+			color: 'blue',
+			vp: "Tim Kaine",
+			show: true
+		},
+		{
+			name: "Donald Trump",
+			party: "Republican",
+			color: 'red',
+			vp: "Mike Pence",
+			show: true
+		}
+	];
+
+	var policies = ["immigration", "Obamacare", "taxes"];
+
+	var publicAPI = {
+		nominees: nominees,
+		issues: policies
+	};
+	return publicAPI;
+})();
+var baz = (function(){
+	var	showParty = function(party) {
+		party.show = !party.show;
+	}
+	return {
+		showParty: showParty
+	}
+})();
+
+var ajaxCall = (function() {
+	// Dark Sky API
+	var secretKey = 'cb8f7c729be5391ec2ba20624a4e8ce4';
+	
+	// format
+	//'https://api.darksky.net/forecast/[key]/[latitude],[longitude]'
+	//'https://api.darksky.net/forecast/cb8f7c729be5391ec2ba20624a4e8ce4/37.8267,-122.4233'
+})();
+
+
+var app = angular.module('stormyApp', []);
+
+app.service('DarkSkyService', ['$http', function ($http) {
+	$http({
+  method: 'GET',
+  url: 'https://api.darksky.net/forecast/cb8f7c729be5391ec2ba20624a4e8ce4/37.8267,-122.4233'
+	}).then(function successCallback(response) {
+		console.log('success: ', response);
+  }, function errorCallback(response) {
+    console.log('error: data is ' + response.data);
+  });
+	
+}]);
+
+app.controller('AppCtrl', ['$scope', 'DarkSkyService', function ($scope, DarkSkyService) {
+	$scope.foo = foo;
+	$scope.baz = baz;
+	
+}]);

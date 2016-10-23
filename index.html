@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html >
+  <head>
+	<meta charset="UTF-8">
+	<title>Current Weather</title>
+	
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+
+	<link rel="stylesheet" href="css/style.css">
+	
+  </head>
+
+  <body  ng-app="stormyApp" ng-controller="AppCtrl" style="background: #333; color: #fff;">
+	<div class="navbar navbar-default" style="background: #000; border-color: #000;">
+	  <div class="nav">
+	    <a class="navbar-brand text-center">Whats the current tempature</a>
+	  </div>
+	</div>
+	<br>
+	<div class="container">
+		<div class="row" > 
+			<div class="col-lg-12" >
+				
+				<div class="row" >
+					<div class="col-md-12" id="center-content">
+						<form action="" class="form-inline ">
+							<fieldset>
+								<div class="form-group center-block" >
+									<button class="btn btn-primary" id="getCurrentLocation()"><i class="glyphicon glyphicon-map-marker"></i></button>
+									<label for="" class="control-label sr-only">Location</label>
+									<input type="search" class="form-control " placeholder="washington dc">
+									<button class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+								</div>
+								
+							</fieldset>
+						</form>
+					</div>
+					
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-lg-12" id="center-content">
+						<div class="title text-center jumbotron" style="background-color: #333">
+						<h1 id="currentTemp" class=""></h1>
+						<!-- <pre class="data"></pre> -->
+						<figure class="icons text-center" >
+							<div id="center-content">
+					        <canvas id="clear-day" width="128" height="128">
+					        </canvas>
+							</div>
+					        <canvas id="clear-night" width="128" height="128">
+					        </canvas>
+
+					        <canvas id="partly-cloudy-day" width="128" height="128">
+					        </canvas>
+
+					        <canvas id="partly-cloudy-night" width="128" height="128">
+					        </canvas>
+
+					        <canvas id="cloudy" width="128" height="128">
+					        </canvas>
+
+					        <canvas id="rain" width="128" height="128">
+					        </canvas>
+
+					        <canvas id="sleet" width="128" height="128">
+					        </canvas>
+
+					        <canvas id="snow" width="128" height="128">
+					        </canvas>
+
+					        <canvas id="wind" width="128" height="128">
+					        </canvas>
+
+					        <canvas id="fog" width="128" height="128">
+					        </canvas>
+
+			      		</figure>
+			      		</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
+	<script src="assets/skycons/skycons.js"></script>
+	<script src="config/api-key.js"></script>
+	<script src="js/index.js"></script>
+	
+	
+	
+  </body>
+</html>
