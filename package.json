@@ -1,0 +1,23 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "learn dark sky api",
+  "main": "index.html",
+  "dependencies": {
+    "install": "^0.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidpham5/weather.git"
+  },
+  "author": "David Pham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidpham5/weather/issues"
+  },
+  "homepage": "https://github.com/davidpham5/weather"
+}
