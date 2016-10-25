@@ -12,8 +12,8 @@
 	
   </head>
 
-  <body  ng-app="stormyApp" ng-controller="AppCtrl" style="background: #333; color: #fff;">
-	<div class="navbar navbar-default" style="background: #000; border-color: #000;">
+  <body  ng-app="stormyApp" ng-controller="AppCtrl">
+	<div class="navbar navbar-default" style="background: #333; border-color: #333;">
 	  <div class="nav">
 	    <a class="navbar-brand text-center">Whats the current tempature</a>
 	  </div>
@@ -22,18 +22,20 @@
 	<div class="container">
 		<div class="row" > 
 			<div class="col-lg-12" >
-				
 				<div class="row" >
 					<div class="col-md-12" id="center-content">
 						<form action="" class="form-inline ">
 							<fieldset>
 								<div class="form-group center-block" >
-									<button class="btn btn-primary" id="getCurrentLocation()"><i class="glyphicon glyphicon-map-marker"></i></button>
+									<button class="btn btn-primary" id="getCurrentLocation()">
+										<i class="glyphicon glyphicon-map-marker"></i>
+									</button>
 									<label for="" class="control-label sr-only">Location</label>
 									<input type="search" class="form-control " placeholder="washington dc">
-									<button class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+									<button class="btn btn-primary">
+										<i class="glyphicon glyphicon-search"></i>
+									</button>
 								</div>
-								
 							</fieldset>
 						</form>
 					</div>
@@ -42,8 +44,8 @@
 				<br>
 				<div class="row">
 					<div class="col-lg-12" id="center-content">
-						<div class="title text-center jumbotron" style="background-color: #333">
-						<h1 id="currentTemp" class=""></h1>
+						<div class="title text-center">
+						<h1 id="currentTemp" class="">{{currentWeather.currently.tempature}}</h1>
 						<!-- <pre class="data"></pre> -->
 						<figure class="icons text-center" >
 							<div id="center-content">
