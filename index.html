@@ -12,7 +12,7 @@
 	
   </head>
 
-  <body  ng-app="stormyApp" ng-controller="AppCtrl">
+  <body  ng-app="stormyApp" ng-controller="AppCtrl as ctrl">
 	<div class="navbar navbar-default" style="background: #333; border-color: #333;">
 	  <div class="nav">
 	    <a class="navbar-brand text-center">Whats the current tempature</a>
@@ -45,7 +45,8 @@
 				<div class="row">
 					<div class="col-lg-12" id="center-content">
 						<div class="title text-center">
-						<h1 id="currentTemp" class="">{{currentWeather.currently.tempature}}</h1>
+						<h1 id="currentTemp" class="">{{ctrl.currentWeather.currently.tempature}}</h1>
+						<daily-weather daily="ctrl.daily.icon"></daily-weather>
 						<!-- <pre class="data"></pre> -->
 						<figure class="icons text-center" >
 							<div id="center-content">
@@ -97,5 +98,6 @@
 	<script src="app/dark-sky/dark-sky-api.js"></script>
 	<script src="app/dark-sky/dark-sky-service.js"></script>
 	
+	<script src="app/daily-weather/daily-weather.js"></script>
   </body>
 </html>

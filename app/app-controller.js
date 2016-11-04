@@ -8,4 +8,8 @@ app.controller('AppCtrl', ['$scope','DarkSkyService', function ($scope, DarkSkyS
 		$scope.currentWeather = result.data;
 	});
 	
+	var self = this;
+	self.daily = {
+    	icon: 'sunny'
+  	};
 }]);
